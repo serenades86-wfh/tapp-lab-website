@@ -21,7 +21,7 @@
     .nav {position:sticky;top:0;z-index:20;background:rgba(251,250,252,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
     .nav-inner {height:85px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
     .brand {display:flex;align-items:center;gap:12px;max-width:330px;}
-    .brand-logo {width:auto;height:60px;object-fit:contain;object-position:left center;}
+    .brand-logo {width:auto;height:70px;max-width:235px;object-fit:contain;object-position:left center;}
     .brand-title {display:flex;flex-direction:column;font-weight:800;line-height:1.15;color:var(--plum);font-size:18px;}
     .brand-title small {font:700 9px 'DM Sans',sans-serif;letter-spacing:.12em;color:var(--teal);margin-top:5px;}
     nav.links {display:flex;align-items:center;gap:24px;}
@@ -38,7 +38,9 @@
     .actions {display:flex;gap:12px;flex-wrap:wrap;margin-top:29px;}
     .btn {display:inline-flex;justify-content:center;align-items:center;border:1px solid var(--plum);background:var(--plum);color:white;padding:13px 20px;border-radius:9px;font-weight:700;font-size:13px;}
     .btn.secondary {background:transparent;color:var(--plum);}
-    .affiliation {font-size:12px;color:#746c79;margin-top:38px;font-weight:600;}
+    .affiliation {font-size:13px;color:var(--plum);margin-top:30px;font-weight:700;line-height:1.7;border-left:3px solid #9478ae;padding-left:15px;}
+    .hero-tagline {font-size:clamp(19px,2vw,25px);font-weight:700;color:#9175ac;margin:0 0 20px;line-height:1.45;}
+    .hero h1 {font-size:clamp(38px,4.2vw,59px);max-width:770px;margin-bottom:14px;}
     .illustration {position:relative;min-height:425px;isolation:isolate;}
     .halo {position:absolute;inset:15px 0 10px 12px;border-radius:46% 54% 50% 50%;background:radial-gradient(circle at 40% 40%,#fcf9ff 0%,#e5d8ee 48%,#c7dcd3 95%);transform:rotate(-13deg);filter:drop-shadow(0 25px 50px #a68cbb29);}
     .grid-art {position:absolute;inset:16% 12%;border:1px solid #ffffffa8;border-radius:50%;transform:rotate(-23deg);}
@@ -83,10 +85,10 @@
     .footer p,.footer a {color:#cfc6d9;font-size:13px;}
     .footer small {font-size:11px;color:#ad9fba;}
     .footer .end {border-top:1px solid #564a60;margin-top:38px;padding-top:22px;display:flex;justify-content:space-between;gap:15px;}
-    .footer .brand-title {color:#fff;}
+    .footer .brand {display:inline-flex;background:#fbfafc;padding:8px 12px;border-radius:10px;}
     @media(max-width:830px) {
       .nav-inner {height:72px;}
-      .brand-logo {width:72px;height:48px;}
+      .brand-logo {width:auto;height:48px;max-width:155px;}
       .brand-title {font-size:15px;}
       .brand-title small {font-size:8px;}
       .menu-btn {display:block;}
@@ -113,7 +115,7 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#home" aria-label="TAPP Lab home">
         <img class="brand-logo" src="tapp-logo.png" alt="TAPP Lab logo">
-        <span class="brand-title">TAPP LAB<small>TRANSLATIONAL AI FOR PRECISION PSYCHIATRY</small></span>
+
       </a>
       <button class="menu-btn" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <nav class="links" id="links" aria-label="Main navigation">
@@ -131,14 +133,15 @@
     <div id="home" class="hero">
       <div class="wrap">
         <div>
-          <div class="eyebrow">CAMH · Krembil Centre for Neuroinformatics</div>
-          <h1>Advancing personalized mental health care <em>through precision psychiatry.</em></h1>
-          <p class="lead">The Translational AI for Precision Psychiatry (TAPP) Lab at the Centre for Addiction and Mental Health (CAMH) brings together expertise in data science, psychology, psychiatry and neuroscience to advance precision mental health care. Our research focuses on developing predictive approaches, evaluating their clinical relevance and translating them into real-world practice. By bridging research and clinical implementation, we aim to support personalized, practical and responsible improvements in mental health care.</p>
+          <div class="eyebrow">TAPP LAB · RESEARCH AT CAMH</div>
+          <h1>Translational AI for <em>Precision Psychiatry.</em></h1>
+          <p class="hero-tagline">Advancing personalized mental health care.</p>
+          <p class="lead">We bring together expertise in data science, psychology, psychiatry and neuroscience to develop predictive approaches, evaluate their clinical relevance and translate them into real-world practice. By bridging research and clinical implementation, we aim to support personalized, practical and responsible improvements in mental health care.</p>
           <div class="actions">
             <a href="#research" class="btn">Explore our research →</a>
             <a href="#people" class="btn secondary">Meet the lab</a>
           </div>
-          <div class="affiliation">Centre for Addiction and Mental Health (CAMH)</div>
+          <div class="affiliation">Krembil Centre for Neuroinformatics · Centre for Addiction and Mental Health (CAMH)<br>University of Toronto</div>
         </div>
         <div class="illustration" aria-label="TAPP Lab logo on an abstract lavender background">
           <div class="halo"></div>
@@ -303,8 +306,8 @@
     <div class="wrap">
       <div class="footergrid">
         <div>
-          <div class="brand"><img class="brand-logo" src="tapp-logo.png" alt="TAPP Lab logo"><span class="brand-title">TAPP LAB<small>TRANSLATIONAL AI FOR PRECISION PSYCHIATRY</small></span></div>
-          <p>Krembil Centre for Neuroinformatics<br>Centre for Addiction and Mental Health (CAMH)</p>
+          <div class="brand"><img class="brand-logo" src="tapp-logo.png" alt="TAPP Lab logo"></div>
+          <p>Krembil Centre for Neuroinformatics<br>Centre for Addiction and Mental Health (CAMH)<br>University of Toronto</p>
         </div>
         <div><strong>Explore</strong><p><a href="#research">Research</a> · <a href="#people">People</a> · <a href="https://scholar.google.com/citations?hl=en&amp;user=FV4JEg0AAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreferrer">Publications ↗</a></p></div>
         <div><strong>Connect</strong><p><a href="mailto:fiona.coutts@camh.ca">fiona.coutts@camh.ca</a><br>Toronto, Ontario, Canada</p></div>
